@@ -12,7 +12,7 @@ https://ornate-jalebi-3f839e.netlify.app
 ```
 # Screen Shots:
 
-<img src="./sc/1.PNG" style="height:350px; width:100%;">
+<img src="./sc/1.PNG" style="height:500px; width:100%;">
 
 
 
