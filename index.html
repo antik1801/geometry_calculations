@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry</title>
+    <script src="https://kit.fontawesome.com/224a830863.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body class="container my-5">
+    <header>
+        <!-- Header Logos sections  -->
+        <section class="d-flex align-items-center justify-content-between bg-primary-subtle p-4">
+            <div>
+                <p class="fs-2 fw-bold">Interactive</p>
+                <p class="text-secondary">Geometry Genius</p>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary" id="blog">Blog</button>
+            </div>
+        </section>
+    </header>
+    <main>
+        <!-- cards section  -->
+        <section class="my-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col" id="card-1">
+                  <div class="card h-100">
+                    <div class="p-5">
+                        <img src="./images/triangle.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Triangle</h5>
+                      <p class="card-text" >Area(A)=0.5 x b x h
+                        <span class="ml-3 edit" id="btn-tri-edit"><i class="fa-solid fa-pen-to-square"></i></span>  
+                      </p>
+                      <div class="d-flex justify-content-between align-items-center gap-2 input-area context" id="tri-context">
+                        <input type="text" id="t-b" class="form-control context" placeholder="b">
+                        <p class="context">cm</p>
+                        <input type="text" id="t-h" class="form-control context" placeholder="h">
+                        <p class="context">cm</p>
+                    </div>
+                    <input type="checkbox" class="form-check-input mt-3 input-toogle">
+                    </div>
+                    <div class="p-4">
+                        <button type="button" class="btn btn-primary mt-3 calculate-btn" id="btn-triangle-calculate">Calculate</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="p-5">
+                        <img src="./images/rectangle.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Rectangle</h5>
+                        <p class="card-text" >Area(A)= w x l
+                        <span class="ml-3 edit" id="btn-rec-edit"><i class="fa-solid fa-pen-to-square"></i></span>     
+                        </p>
+                        <div class="d-flex justify-content-center align-items-center gap-2 context" id="rect-context">
+                          <input type="text" id="r-w" class="form-control context" placeholder="w">
+                          <p class="context">cm</p>
+                          <input type="text" id="r-l" class="form-control context" placeholder="l">
+                          <p class="context">cm</p>
+                        </div>
+                    </div>
+                    <input type="checkbox" class="form-check-input mt-3 input-toogle">
+                    <div class="p-4">
+                        <button type="button" class="btn btn-primary mt-3 calculate-btn" id="btn-rectangle-calculate">Calculate</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="p-5">
+                        <img src="./images/parallelogram.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Parallelogram</h5>
+                        <p class="card-text">Area(A)= b x h
+                            <span class="ml-3 edit" id="btn-para-edit"><i class="fa-solid fa-pen-to-square"></i></span>  
+                        </p>
+                        <div class="d-flex justify-content-center align-items-center gap-2 context" id="para-context">
+                          <input type="text" id="p-b" class="form-control context" placeholder="b">
+                          <p class="context">cm</p>
+                          <input type="text" id="p-h" class="form-control context" placeholder="h">
+                          <p class="context">cm</p>
+                        </div>
+                    </div>
+                    <input type="checkbox" class="form-check-input mt-3 input-toogle">
+                    <div class="p-4">
+                        <button type="button" class="btn btn-primary mt-3 calculate-btn" id="btn-parallelogram-calculate">Calculate</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold">Area Calculations</h5>
+                       <div id="parent-container">
+                        <div class="d-flex justify-content-evenly align-items-center">
+                            <p>0</p>
+                            <p>Triangle</p>
+                            <p><span>12</span>cm<sup>2</sup></p>
+                            <p><button class="btn btn-primary convert-m2">Convert to m<sup>2</sup></button></p>
+                        </div>
+                        
+                       </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                      <div class="p-5">
+                          <img src="./images/rhombus.png" class="card-img-top" alt="...">
+                      </div>
+                      <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Rhombus</h5>
+                        <p class="card-text" >Area(A)=0.5 x d<sub>1</sub> x d <sub>2</sub>
+                        <span class="ml-3 edit" id="btn-rhom-edit"><i class="fa-solid fa-pen-to-square"></i></span>  
+                        </p>
+                        <div class="d-flex justify-content-center align-items-center gap-2 context" id="rhom-context">
+                          <input type="text" id="r-d1" class="form-control context" placeholder="d1">
+                          <p class="context">cm</p>
+                          <input type="text" id="r-d2" class="form-control context" placeholder="d2">
+                          <p class="context">cm</p>
+                        </div>
+                        <input type="checkbox" class="form-check-input mt-3 input-toogle">
+                    </div>
+                    <div class="p-4">
+                        <button type="button" class="btn btn-primary mt-3 calculate-btn" id="btn-rhombus-calculate">Calculate</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                      <div class="p-5">
+                          <img src="./images/pentagon.png" class="card-img-top" alt="...">
+                      </div>
+                      <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Pentagon</h5>
+                        <p class="card-text" >Area(A)=0.5 x p x b
+                        <span class="ml-3 edit" id="btn-pent-edit"><i class="fa-solid fa-pen-to-square"></i></span>  
+                        </p>
+                        <div class="d-flex justify-content-center align-items-center gap-2 context" id="pent-context">
+                          <input type="text" id="p-p" class="form-control context" placeholder="p(demo)" readonly>
+                          <p class="context">cm</p>
+                          <input type="text" id="p-b" class="form-control context" placeholder="b(demo)" readonly>
+                          <p class="context">cm</p>
+                        </div>
+                        <input type="checkbox" class="form-check-input mt-3 input-toogle">
+                    </div>
+                    <div class="p-4">
+                        <button type="button" class="btn btn-primary mt-3 calculate-btn" id="btn-pentagon-calculate">Calculate</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                      <div class="p-5">
+                          <img src="./images/ellipse.png" class="card-img-top" alt="...">
+                      </div>
+                      <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Ellipse</h5>
+                        <p class="card-text" >Area(A)= pi x a x b
+                        <span class="ml-3 edit" id="btn-elip-edit"><i class="fa-solid fa-pen-to-square"></i></span>  
+                        </p>
+                        <div class="d-flex justify-content-center align-items-center gap-2 context" id="elip-context">
+                          <input type="text" id="e-a" class="form-control context" placeholder="a(demo)" readonly>
+                          <p class="context">cm</p>
+                          <input type="text" id="width" class="form-control context" id="e-b" placeholder="b(demo)" readonly>
+                          <p class="context">cm</p>
+                        </div>
+                        <input type="checkbox" class="form-check-input mt-3 input-toogle">
+                    </div>
+                    <div class="p-4">
+                        <button type="button" class="btn btn-primary mt-3 calculate-btn" id="btn-ellipse-calculate">Calculate</button>
+                    </div>
+                    </div>
+                </div>
+              </div>
+        </section>
+    </main>
+    <footer></footer>
+    <!-- JS  -->
+    <script src="./js/utility.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
